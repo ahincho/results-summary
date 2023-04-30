@@ -3,42 +3,226 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+    <!-- Google Fonts API -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+    <!-- FavIcon Frontend Mentor-->
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" alt="frontend-mentor-favicon">
-    
+    <!-- Title of the web page -->
     <title>Frontend Mentor | Results summary component</title>
-
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution { font-size: 16px; text-align: center; }
       .attribution a { color: hsl(228, 45%, 44%); }
+      main {
+        display: flex;
+        height: 90vh;
+        justify-content: center;
+        align-items: center;
+      }
+      main article {
+        display: flex;
+        flex-direction: row;
+        height: 50vh;
+        width: 40vw;
+        background-color: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 255, 0.25);
+        border-radius: 40px;
+        overflow: hidden;
+      }
+      .result {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 50%;
+        margin: 0px;
+        background: linear-gradient(rgb(120, 87, 255), rgb(78, 33, 202));
+        border-radius: 40px;
+      }
+      .result p {
+        color: hsl(0, 0%, 100%);
+        font-family: 'Hanken Grotesk', sans-serif;
+        padding: 0px;
+        font-size: 25px;
+      }
+      .result .circle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(rgb(78, 33, 202), rgb(120, 87, 255));
+        border-radius: 50%;
+        padding: 50px 55px;
+      }
+      .result .circle h2 {
+        color: hsl(0, 0%, 100%);
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-weight: 800;
+        font-size: 64px;
+        margin: 0px;
+        margin-bottom: -5px;
+      }
+      .result h3 {
+        padding: 10px auto;
+        margin: 10px 0px;
+        font-family: 'Hanken Grotesk', sans-serif;
+        color: hsl(0, 0%, 100%);
+        font-size: 20px;
+        text-align: center;
+        width: 70%;
+        font-weight: lighter;
+      }
+      .result span {
+        color: hsl(0, 0%, 100%);
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        margin-top: -10px;
+      }
+      .result strong {
+        padding-top: 15px;
+        font-family: 'Hanken Grotesk', sans-serif;
+        color: hsl(0, 0%, 100%);
+        font-size: 30px;
+      }
+      .summary {
+        display: flex;
+        flex: 50%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+      }
+      .summary h4 {
+        width: 70%;
+        text-align: left;
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 25px;
+        margin: 0px auto;
+      }
+      .summary ul {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+      }
+      .summary li {
+        display: flex;
+        justify-content: space-around;
+        width: 70%;
+        margin: 20px auto;
+        align-items: center;
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 18px;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      .summary .skill-reaction {
+        color: rgb(255, 0, 0);
+        background-color: rgba(255, 0, 0, 0.15);
+      }
+      .summary .skill-memory {
+        color: rgb(255, 150, 0);
+        background-color: rgba(255, 255, 100, 0.15);
+      }
+      .summary .skill-verbal {
+        color: rgb(0, 150, 0);
+        background-color: rgba(0, 255, 0, 0.15);
+      }
+      .summary .skill-visual {
+        color: rgb(0, 0, 255);
+        background-color: rgba(0, 0, 255, 0.15);
+      }
+      .summary li strong {
+        color: black;
+      }
+      .summary li strong span {
+        color: rgba(0, 0, 0, 0.5);
+      }
+      .summary button {
+        width: 75%;
+        padding: 15px;
+        border: none;
+        border-radius: 40px;
+        font-family: 'Hanken Grotesk', sans-serif;
+        font-size: 16px;
+        background-color: hsl(224, 30%, 27%);
+        color: white;
+      }
+      @media (max-width: 1600px) {
+        main article {
+          width: 50vw;
+        }
+      }
+      @media (max-width: 1200px) {
+        main article {
+          width: 60vw;
+        }
+      }
+      @media (max-width: 960px) {
+        main article {
+          width: 80vw;
+        }
+      }
+      @media (max-width: 640px) {
+        main {
+          margin: 30px 0px;
+        }
+        main article {
+          width: 70vw;
+          height: 90vh;
+          flex-direction: column;
+        }
+      }
+      @media (max-width: 400px) {
+        main article {
+          width: 100vw;
+        }
+      }
     </style>
   </head>
   <body>
-    
-    Your Result
-    76
-    of 100
-
-    Great
-    You scored higher than 65% of the people who have taken these tests.
-    
-    Summary
-
-    Reaction
-    80 / 100
-
-    Memory
-    92 / 100
-
-    Verbal
-    61 / 100
-
-    Visual
-    72 / 100
-
-    Continue
-    
+    <main>
+      <article>
+        <section class="result">
+          <p>Your Result</p>
+          <div class="circle">
+            <h2>76</h2>
+            <span>of 100</span>
+          </div>
+          <strong>Great</strong>
+          <h3>You scored higher than 65% of the people who have taken these tests.</h3>
+        </section>
+        <section class="summary">
+          <h4>Summary</h4>
+          <ul type="none">
+            <li class="skill-reaction">
+              <img src="./assets/images/icon-reaction.svg">
+              Reaction
+              <strong>80<span> / 100</span></strong>
+            </li>
+            <li class="skill-memory">
+              <img src="./assets/images/icon-memory.svg">
+              Memory
+              <strong>92<span> / 100</span></strong>
+            </li>
+            <li class="skill-verbal">
+              <img src="./assets/images/icon-verbal.svg">
+              Verbal
+              <strong>61<span> / 100</span></strong>
+            </li>
+            <li class="skill-visual">
+              <img src="./assets/images/icon-visual.svg">
+              Visual
+              <strong>72<span> / 100</span></strong>
+            </li>
+          </ul>
+          <button>Continue</button>
+        </section>
+      </article>
+    </main>
     <footer class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://www.linkedin.com/in/angel-hincho-jove/">Angel Hincho Jove</a>.
