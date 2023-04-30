@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
     <!-- FavIcon Frontend Mentor-->
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" alt="frontend-mentor-favicon">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
     <!-- Title of the web page -->
     <title>Frontend Mentor | Results summary component</title>
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -148,8 +148,12 @@
         border-radius: 40px;
         font-family: 'Hanken Grotesk', sans-serif;
         font-size: 16px;
-        background-color: hsl(224, 30%, 27%);
+        background-color: rgb(48, 59, 90);
         color: white;
+        transition: all 2s;
+      }
+      .summary button:hover {
+        background: linear-gradient(rgb(120, 87, 255), rgb(78, 33, 202));
       }
       @media (max-width: 1600px) {
         main article {
@@ -199,22 +203,22 @@
           <h4>Summary</h4>
           <ul type="none">
             <li class="skill-reaction">
-              <img src="./assets/images/icon-reaction.svg">
+              <img src="./assets/images/icon-reaction.svg" alt="icon-reaction">
               Reaction
               <strong>80<span> / 100</span></strong>
             </li>
             <li class="skill-memory">
-              <img src="./assets/images/icon-memory.svg">
+              <img src="./assets/images/icon-memory.svg" alt="icon-memory">
               Memory
               <strong>92<span> / 100</span></strong>
             </li>
             <li class="skill-verbal">
-              <img src="./assets/images/icon-verbal.svg">
+              <img src="./assets/images/icon-verbal.svg" alt="icon-verbal">
               Verbal
               <strong>61<span> / 100</span></strong>
             </li>
             <li class="skill-visual">
-              <img src="./assets/images/icon-visual.svg">
+              <img src="./assets/images/icon-visual.svg" alt="icon-visual">
               Visual
               <strong>72<span> / 100</span></strong>
             </li>
